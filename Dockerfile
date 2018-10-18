@@ -16,10 +16,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	python3-numpy \
 	python3-matplotlib
 
-# run MySQL server
-RUN service mysql start
+COPY main /
 
-
-# enter python command-line
-CMD python3
+# enter main command
+CMD /main
 

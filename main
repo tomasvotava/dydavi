@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Start MySQL
+echo "Starting MySQL service..."
+service mysql start
+echo "MySQL started"
+
+/bin/sh
+
+
+
