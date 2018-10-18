@@ -9,6 +9,8 @@ FROM php:7.2-apache
 
 # update
 RUN apt-get update && apt-get install -y --no-install-recommends \
+	mysql-client \
+	mysql-server \
 	python3 \
 	python3-pip \
 	python3-numpy \
