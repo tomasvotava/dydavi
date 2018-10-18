@@ -1,2 +1,2 @@
 # dydavi
-Dynami Data Visualizer
+Dynamic Data Visualizer
