@@ -1,5 +1,8 @@
 #!/bin/sh
 
+mysql_password=$(cat .mysql)
+echo "MySQL Password: $mysql_password"
+
 # Start MySQL
 echo "Starting MySQL service..."
 service mysql start

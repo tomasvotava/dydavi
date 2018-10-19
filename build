@@ -1,6 +1,7 @@
 #!/bin/sh
 
-
+# Generate password for MySQL
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32} > root/.mysql
 
 
 docker build -t dydavi .
