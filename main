@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mysql_password=$(cat .mysql)
+mysql_password=$(cat /.mysql)
 echo "MySQL Password: $mysql_password"
 
 # Start MySQL
