@@ -10,7 +10,7 @@ echo "MySQL started"
 
 # Create DB and user for MySQL
 echo "Setting up MySQL workspace..."
-mysql -e "CREATE USER \`dydavi\`@\`%\` IDENTIFIED BY \'$mysql_password\'; CREATE DATABASE \`dydavi\`; GRANT ALL ON \`dydavi\`.* TO \`dydavi\`@\`%\`; FLUSH PRIVILEGES;"
+mysql -e "CREATE USER \\\`dydavi\\\`@\\\`%\\\` IDENTIFIED BY \\\'$mysql_password\\\'; CREATE DATABASE \\\`dydavi\\\`; GRANT ALL ON \\\`dydavi\\\`.* TO \\\`dydavi\\\`@\`%\\\`; FLUSH PRIVILEGES;"
 echo "Done."
 
 echo "Starting interactive shell"
