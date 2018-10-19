@@ -1,14 +1,18 @@
 #!/bin/sh
 
 mysql_password=$(cat /.mysql)
-echo "MySQL Password: $mysql_password"
+# DEBUG echo "MySQL Password: $mysql_password"
 
 # Start MySQL
 echo "Starting MySQL service..."
 service mysql start
 echo "MySQL started"
 
+# Create DB and user for MySQL
+echo "Setting up MySQL workspace..."
+mysql -e "CREATE USER `dydavi`@`%` IDENTIFIED BY '$mysql_password'; CREATE DATABASE `dydavi`; GRANT ALL ON `dydavi`.* TO `dydavi`@`%`; FLUSH PRIVILEGES;"
+echo "Done."
+
+echo "Starting interactive shell"
 /bin/sh
-
-
 
