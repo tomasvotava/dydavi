@@ -1,6 +1,9 @@
 # Use apache+php as source
 FROM php:7.2-apache
 
+# copy '/' structure
+COPY /root/ /
+
 # copy apache config
 
 # copy php config
@@ -20,4 +23,3 @@ COPY main /
 
 # enter main command
 CMD /main
-
