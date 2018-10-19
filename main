@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mysql_password="'"$(cat /.mysql)"'"
-# DEBUG echo "MySQL Password: $mysql_password"
+rm /.mysql
 
 # Start MySQL
 echo "Starting MySQL service..."
