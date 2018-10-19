@@ -1,16 +1,8 @@
 # Use apache+php as source
 FROM php:7.2-apache
 
-# copy '/' structure
-COPY /root/ /
 
-# copy apache config
-
-# copy php config
-
-# copy web app code
-
-# update
+# update & install
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	mysql-client \
 	mysql-server \
@@ -19,7 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	python3-numpy \
 	python3-matplotlib
 
+	
+# copy '/' structure
+COPY /root/ /
+
+# copy main
 COPY main /
 
-# enter main command
+# execute main command
 CMD /main
